@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t rameshrn/docker-react -f Dockerfile.dev frontend
+    - docker build -t rameshrn/docker-react -f frontend/Dockerfile.dev .
 
 script:
     - docker run rameshrn/docker-react npm run test -- --coverage
